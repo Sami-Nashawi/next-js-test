@@ -10,7 +10,7 @@ const Profile = async () => {
         {
           // We intentionally disable Next.js Cache to better demo
           // `loading.js`
-          cache: 'no-cache',
+        //   cache: 'no-cache',
         },
       );
     
