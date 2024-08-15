@@ -1,15 +1,12 @@
-import Image from "next/image";
+import { Suspense } from "react";
+import Fsdf from "./f";
 
-const fetchImage =async()=> {
-const res = await fetch('https://dog.ceo/api/breeds/image/random')
-const data = await res.json()
-return data;
-}
-const RandomImage = async () => {
-    const data = await fetchImage()
+const RandomImage =  () => {
     return <>
     <h1>image page</h1>
-    <Image src={data?.message} alt="image" width={500} height={200} />
+    <Suspense fallback={<p>Fetching Image...</p>}>
+        <Fsdf/>
+    </Suspense>
     </>
 }
 
