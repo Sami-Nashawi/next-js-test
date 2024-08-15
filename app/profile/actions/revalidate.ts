@@ -5,8 +5,7 @@ import { redirect } from "next/navigation"
 
  
 export async function revalidate() {
-    setTimeout(()=> {
-        revalidatePath('/image','layout')
+    new Promise((resolve) => setTimeout(resolve,5000));
+    revalidatePath('/image','layout')
         redirect('/image')
-    },10000)
 }
