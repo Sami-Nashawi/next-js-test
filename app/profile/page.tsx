@@ -1,6 +1,7 @@
 // import RevalidateButton from "./revalidate-button";
 
 import { notFound } from "next/navigation";
+import RevalidateButton from "./revalidate-button";
 
 const Profile = async () => {
     const res = await fetch(
@@ -10,7 +11,7 @@ const Profile = async () => {
         {
           // We intentionally disable Next.js Cache to better demo
           // `loading.js`
-        //   cache: 'no-cache',
+          cache: 'no-cache',
         },
       );
     
@@ -32,7 +33,7 @@ const Profile = async () => {
           <h1 key={i} >{i}</h1>
         ))}
       </div>
-    {/* <RevalidateButton/> */}
+    <RevalidateButton/>
     </>
 }
 
