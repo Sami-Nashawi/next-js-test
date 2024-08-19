@@ -1,8 +1,9 @@
+"use client";
 export default function Home() {
 const  submitAction =  async (formData:FormData) => {
   'use server';
   console.log(formData)
-  
+  f();
 }
 const f = () => {
   console.log('hello world')
