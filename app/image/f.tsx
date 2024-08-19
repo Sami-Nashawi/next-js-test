@@ -1,13 +1,11 @@
+import { unstable_noStore } from "next/cache";
 import Image from "next/image";
 
 const fetchImage =async()=> {
 const res = await fetch('https://dog.ceo/api/breeds/image/random',
     {
-        // We intentionally disable Next.js Cache to better demo
-        // `loading.js`
-        cache: 'no-cache',
-      },
-
+        cache : 'no-store'
+    }
 )
 const data = await res.json()
 return data;
