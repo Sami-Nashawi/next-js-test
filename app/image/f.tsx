@@ -2,10 +2,7 @@ import { unstable_noStore } from "next/cache";
 import Image from "next/image";
 
 const fetchImage =async()=> {
-const res = await fetch('https://dog.ceo/api/breeds/image/random',
-    {
-        cache : 'no-store'
-    }
+const res = await fetch('https://dog.ceo/api/breeds/image/random'
 )
 const data = await res.json()
 return data;
